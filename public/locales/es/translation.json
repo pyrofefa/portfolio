@@ -1,0 +1,34 @@
+{
+    "site": {
+        "title": "Esteban Flores - portafolio",
+        "description": "Proyecto web"
+    },
+    "header": {
+        "about": "Sobre mí",
+        "experience": "Experiencia"
+    },
+    "about":{
+        "me" : "Hola, soy Esteban.",
+        "grade": "Licenciado en sistemas y maestro en administración de la calidad.",
+        "content": "Alrededor de 6 años en proyectos de programación utilizando herramientas tales como Laravel, Ionic, etc.",
+        "location": "De Hermosillo Sonora Mexico"
+    },
+    "experience": {
+        "tittle": "Experiencia Laboral"
+    },
+    "cesave":{
+        "title" : "Pogramador web y Movil - Comité Estatal de Sanidad Vegetal de Sonora",
+        "period":"Junio 2019 - Actualmente...",
+        "description":"Desarrollo de proyectos web en laravel y aplicaciones móviles con Ionic para atender los problemas fitosanitarios de cultivos de productores, permisos de siembras tanto nacionales como estatales."
+    },
+    "fidelity":{
+        "title" : "Programador Web y Movil − Smarketing Hmo / FidelityApps",
+        "period":"Septiembre 2018 - Mayo 2019",
+        "description":"Desarrollo de proyectos web con laravel para empresas de la localidad de Hermosillo."
+    },
+    "teknol":{
+        "title" : "Programador Web − Teknol",
+        "period":"Junio 2016 - Septiembre 2018",
+        "description":"Desarrollo de aplicaciones web con laravel y angular para marketing de algunas empresas e instituciones de Hermosillo Sonora."
+    }
+  }

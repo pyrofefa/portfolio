@@ -1,26 +1,24 @@
 ---
-import ExperienceItem from "./ExperienceItem.astro"
+import { t } from "i18next";
+import ExperienceItem from "./ExperienceItem.astro";
 const EXPERIENCIE = [
   {
-    date: "Junio 2019 - Actualmente...",
-    title: "Pogramador web y Movil − Comité Estatal de Sanidad Vegetal de Sonora",
-    description:
-      "Desarrollo de proyectos web en laravel y aplicaciones móviles con Ionic para atender los problemas fitosanitarios de cultivos de productores, permisos de siembras tanto nacionales como estatales.",
+    date: t("cesave.period"),
+    title: t("cesave.title"),
+    description: t("cesave.description"),
     link: "",
   },
   {
-    date: "Septiembre 2018 - Mayo 2019",
-    title: "Programador Web y Movil − Smarketing Hmo / FidelityApps",
-    description:
-      "Desarrollo de proyectos web con laravel para empresas de la localidad de Hermosillo.",
+    date: t("fidelity.period"),
+    title: t("fidelity.title"),
+    description: t("fidelity.description"),
   },
   {
-    date: "Junio 2016 - Septiembre 2018",
-    title: "Programador Web − Teknol",
-    description:
-    "Desarrollo de aplicaciones web con laravel y angular para marketing de algunas empresas e instituciones de Hermosillo Sonora."
+    date: t("teknol.period"),
+    title: t("teknol.title"),
+    description: t("teknol.description"),
   },
-]
+];
 ---
 
 <ol class="relative border-s border-gray-200 ml-3">
@@ -31,3 +29,4 @@ const EXPERIENCIE = [
       </li>
     ))
   }
+</ol>

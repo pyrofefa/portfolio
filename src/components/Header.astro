@@ -1,7 +1,15 @@
-<header class="flex justify-center items-center py-5 w-full xl:w-[1120px] mx-auto">
+---
+import { LanguageSelector } from "astro-i18next/components";
+import { t } from "i18next";
+---
+
+<header
+  class="flex justify-center items-center py-5 w-full xl:w-[1120px] mx-auto"
+>
   <nav class="flex flex-row gap-x-10 opacity-80">
-    <a href="#sobre-mi">Sobre Mi</a>
-    <a href="#experiencia">Experiencia</a>
-    <a href="#proyectos">Proyectos</a>
+    <a href="#about">{t("header.about")}</a>
+    <a href="#experience">{t("header.experience")}</a>
+    <!--<a href="#proyectos">Proyectos</a>-->
+    <LanguageSelector showFlag={false} class="my-select-class" />
   </nav>
 </header>

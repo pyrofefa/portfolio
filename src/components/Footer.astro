@@ -1,3 +1,7 @@
+---
+import { t } from "i18next";
+---
+
 <footer
   class="rounded-lg shadow m-4 bg-black/20 backdrop-blur-lg w-full xl:w-[1120px] mx-auto"
 >
@@ -11,7 +15,9 @@
       class="flex flex-wrap items-center mt-3 text-sm font-medium text-white-500 sm:mt-0"
     >
       <li>
-        <a href="#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mi</a>
+        <a href="#about" class="hover:underline me-4 md:me-6"
+          >{t("header.about")}</a
+        >
       </li>
     </ul>
   </div>

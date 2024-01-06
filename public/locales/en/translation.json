@@ -1,0 +1,34 @@
+{
+    "site": {
+      "title": "Esteban Flores - portfolio",
+      "description": "Web project"
+    },
+    "header": {
+        "about": "About Me",
+        "experience": "Experience"
+    },
+    "about":{
+        "me" : "Hello, I'm Esteban.",
+        "grade": "I hold a Bachelor's degree in Systems and a Master's in Quality Management.",
+        "content": "I have approximately 6 years of experience in programming projects using tools such as Laravel, Ionic, etc.",
+        "location": "I'm from Hermosillo, Sonora, Mexico."
+    },
+    "experience": {
+        "tittle": "Work Experience"
+    },
+    "cesave":{
+        "title" : "Web and Mobile Developer - Comité Estatal de Sanidad Vegetal de Sonora",
+        "period":"June 2019 - Currently...",
+        "description":"Development of web projects in laravel and mobile applications with Ionic to address phytosanitary problems of crops of producers, planting permits both national and state."
+    },
+    "fidelity":{
+        "title" : "Web and Mobile Developer − Smarketing Hmo / FidelityApps",
+        "period":"September 2018 - May 2019",
+        "description":"Development of web projects with laravel for companies in Hermosillo."
+    },
+    "teknol":{
+        "title" : "Web Developer − Teknol",
+        "period":"June 2016 - September 2018",
+        "description":"Development of web applications with laravel and angular for marketing of some companies and institutions in Hermosillo Sonora."
+    }
+  }
