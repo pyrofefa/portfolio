@@ -1,0 +1,65 @@
+---
+import i18next from "i18next";
+import SectionContainer from "./SectionContainer.astro";
+import GitHub from "../icons/GitHub.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+import Mail from "../icons/Mail.astro";
+
+const t = i18next.t.bind(i18next);
+---
+
+<SectionContainer id="contact" class="py-20">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2
+      class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white"
+    >
+      {t("contact.title")}
+    </h2>
+
+    <p class="text-gray-600 dark:text-gray-400 text-lg mb-8 max-w-2xl mx-auto">
+      {t("contact.subtitle")}
+    </p>
+
+    <!-- CTA Button -->
+    <div class="mb-8">
+      <a
+        href="mailto:fcoestebanflores@gmail.com"
+        class="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-all hover:scale-105 shadow-lg hover:shadow-blue-500/50"
+      >
+        <Mail class="size-5" />
+        {t("contact.cta")}
+      </a>
+    </div>
+
+    <!-- Social Links -->
+    <div class="flex gap-6 justify-center items-center">
+      <a
+        href="https://github.com/pyrofefa"
+        target="_blank"
+        rel="noopener"
+        class="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors group"
+      >
+        <div
+          class="p-3 bg-gray-100 dark:bg-white/5 rounded-lg border border-gray-200 dark:border-white/10 group-hover:border-blue-500/50 transition-all"
+        >
+          <GitHub class="size-6" />
+        </div>
+        <span class="hidden md:inline">GitHub</span>
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/franciscoestebanflores"
+        target="_blank"
+        rel="noopener"
+        class="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors group"
+      >
+        <div
+          class="p-3 bg-gray-100 dark:bg-white/5 rounded-lg border border-gray-200 dark:border-white/10 group-hover:border-blue-500/50 transition-all"
+        >
+          <LinkedIn class="size-6" />
+        </div>
+        <span class="hidden md:inline">LinkedIn</span>
+      </a>
+    </div>
+  </div>
+</SectionContainer>

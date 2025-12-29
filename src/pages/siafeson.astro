@@ -1,0 +1,149 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import i18next from "i18next";
+
+import enTranslations from "../locales/en/translation.json";
+import esTranslations from "../locales/es/translation.json";
+
+const t = i18next.t.bind(i18next);
+const currentLang = i18next.language;
+
+// Get apps from translations
+const translations = currentLang === "es" ? esTranslations : enTranslations;
+const appsFromTranslations = translations.projects.siafeson.apps;
+
+// Map translations to app objects with links
+const appLinks = [
+  "https://play.google.com/store/apps/details?id=siafeson.movil.simcros_2",
+  "https://play.google.com/store/apps/details?id=siafeson.movil.simpicudomuestreo_2",
+  "https://play.google.com/store/apps/details?id=siafeson.movil.sima_2",
+  "https://play.google.com/store/apps/details?id=siafeson.movil.simmoko_2",
+  "https://play.google.com/store/apps/details?id=siafeson.movil.simlan_2",
+  "https://play.google.com/store/apps/details?id=siafeson.movil.simcha_2",
+  "https://play.google.com/store/apps/details?id=siafeson.movil.simarp_2",
+  "https://play.google.com/store/apps/details?id=movil.siafeson.simpiojo",
+  "https://play.google.com/store/apps/details?id=siafeson.movil.simdiacqt",
+  "https://play.google.com/store/apps/details?id=siafeson.movil.simdiacq_2",
+  "https://play.google.com/store/apps/details?id=siafeson.movil.trampeo",
+  "https://play.google.com/store/apps/details?id=siafeson.movil.simpar_2",
+  "https://play.google.com/store/apps/details?id=movil.siafeson.simmbla_2",
+  "https://play.google.com/store/apps/details?id=siafeson.movil.sipvidcq",
+  "https://play.google.com/store/apps/details?id=siafeson.movil.sipvid",
+  "https://play.google.com/store/apps/details?id=siafeson.movil.simpra_2",
+  "https://play.google.com/store/apps/details?id=siafeson.movil.encuestas",
+  "https://play.google.com/store/apps/details?id=siafeson.movil.inventarios",
+];
+
+const apps = appsFromTranslations.map((appText: string, index: number) => {
+  const [name, ...descParts] = appText.split(" - ");
+  return {
+    name: name.trim(),
+    description: descParts.join(" - ").trim(),
+    link: appLinks[index] || "#"
+  };
+});
+
+const pageTitle = t("projects.siafeson.title") + " - " + (currentLang === "es" ? "Aplicaciones" : "Applications");
+const pageDescription = t("projects.siafeson.description");
+const backText = currentLang === "es" ? "Volver a Proyectos" : "Back to Projects";
+---
+
+<Layout title={pageTitle} lang={i18next.language}>
+  <SectionContainer class="py-20">
+    <div class="max-w-4xl mx-auto">
+      <!-- Header -->
+      <div class="mb-12">
+        <a
+          href={i18next.language === "es" ? "/es/#projects" : "/#projects"}
+          class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 mb-6 transition-colors"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+          </svg>
+          {backText}
+        </a>
+
+        <h1
+          class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4"
+        >
+          {t("projects.siafeson.title")}
+        </h1>
+
+        <p class="text-lg text-gray-600 dark:text-gray-400">
+          {pageDescription}
+        </p>
+
+        <div class="flex flex-wrap gap-2 mt-6">
+          <span
+            class="px-3 py-1 bg-blue-100 dark:bg-blue-500/10 text-blue-700 dark:text-blue-300 text-sm rounded-full border border-blue-200 dark:border-blue-500/20"
+          >
+            Ionic
+          </span>
+          <span
+            class="px-3 py-1 bg-blue-100 dark:bg-blue-500/10 text-blue-700 dark:text-blue-300 text-sm rounded-full border border-blue-200 dark:border-blue-500/20"
+          >
+            TypeScript
+          </span>
+          <span
+            class="px-3 py-1 bg-blue-100 dark:bg-blue-500/10 text-blue-700 dark:text-blue-300 text-sm rounded-full border border-blue-200 dark:border-blue-500/20"
+          >
+            Cordova
+          </span>
+          <span
+            class="px-3 py-1 bg-blue-100 dark:bg-blue-500/10 text-blue-700 dark:text-blue-300 text-sm rounded-full border border-blue-200 dark:border-blue-500/20"
+          >
+            Android
+          </span>
+        </div>
+      </div>
+
+      <!-- Apps Grid -->
+      <div class="grid md:grid-cols-2 gap-4">
+        {
+          apps.map((app) => (
+            <a
+              href={app.link}
+              target="_blank"
+              rel="noopener"
+              class="group bg-gray-100 dark:bg-white/5 backdrop-blur-sm rounded-lg border border-gray-200 dark:border-white/10 p-6 hover:border-blue-500/50 transition-all hover:scale-[1.02]"
+            >
+              <div class="flex items-start justify-between gap-4">
+                <div class="flex-1">
+                  <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    {app.name}
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    {app.description}
+                  </p>
+                </div>
+                <svg
+                  class="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </SectionContainer>
+</Layout>

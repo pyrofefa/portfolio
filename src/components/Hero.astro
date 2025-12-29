@@ -1,0 +1,89 @@
+---
+import i18next from "i18next";
+import GitHub from "../icons/GitHub.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+import Mail from "../icons/Mail.astro";
+
+const t = i18next.t.bind(i18next);
+---
+
+<section class="min-h-screen flex items-center justify-center px-4 py-20">
+  <div class="max-w-4xl mx-auto text-center">
+    <!-- Photo with glow effect -->
+    <div class="relative inline-block mb-8">
+      <div class="absolute inset-0 bg-blue-500/20 blur-2xl rounded-full"></div>
+      <img
+        class="relative rounded-full w-36 h-36 md:w-40 md:h-40 object-cover border-4 border-white/10 shadow-2xl"
+        src="https://cdn-photos.occ.com.mx/images/photos/300x300/384/3848fe3d0787446f9cf6357414777796.jpg"
+        alt="Esteban Flores"
+      />
+    </div>
+
+    <!-- Name and Title -->
+    <h1
+      class="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400 bg-clip-text text-transparent"
+    >
+      {t("hero.name")}
+    </h1>
+
+    <h2
+      class="text-xl md:text-2xl lg:text-3xl font-semibold text-blue-600 dark:text-blue-400 mb-4"
+    >
+      {t("hero.title")}
+    </h2>
+
+    <p
+      class="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto"
+    >
+      {t("hero.tagline")}
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="flex flex-wrap gap-4 justify-center mb-12">
+      <a
+        href="#projects"
+        class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-all hover:scale-105 shadow-lg hover:shadow-blue-500/50"
+      >
+        {t("hero.viewProjects")}
+      </a>
+      <a
+        href="/Curriculum.pdf"
+        download
+        class="px-8 py-3 bg-gray-200 hover:bg-gray-300 dark:bg-white/10 dark:hover:bg-white/20 text-gray-900 dark:text-white rounded-lg font-semibold transition-all hover:scale-105 border border-gray-300 dark:border-white/20"
+      >
+        {t("hero.downloadCV")}
+      </a>
+    </div>
+
+    <!-- Social Icons -->
+    <div
+      class="flex gap-6 justify-center items-center text-gray-600 dark:text-gray-400"
+    >
+      <a
+        href="https://github.com/pyrofefa"
+        target="_blank"
+        rel="noopener"
+        class="hover:text-gray-900 dark:hover:text-white transition-colors hover:scale-110 transform"
+        aria-label="GitHub"
+      >
+        <GitHub class="size-6" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/franciscoestebanflores"
+        target="_blank"
+        rel="noopener"
+        class="hover:text-gray-900 dark:hover:text-white transition-colors hover:scale-110 transform"
+        aria-label="LinkedIn"
+      >
+        <LinkedIn class="size-6" />
+      </a>
+      <a
+        href="mailto:fcoestebanflores@gmail.com"
+        class="hover:text-gray-900 dark:hover:text-white transition-colors hover:scale-110 transform"
+        aria-label="Email"
+      >
+        <Mail class="size-6" />
+      </a>
+    </div>
+  </div>
+</section>

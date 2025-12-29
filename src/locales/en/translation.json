@@ -51,12 +51,42 @@
       "description": "National and state planting permit management system with real-time tracking and approval workflows."
     },
     "mobile": {
-      "title": "Field Data Collection App",
-      "description": "Mobile application for field technicians to collect and synchronize agricultural data in real-time."
+      "title": "Native Android Suite - SIAFESON",
+      "description": "Suite of native Android applications developed with Kotlin for phytosanitary field monitoring. Includes 3+ optimized apps with MVVM architecture, Room Database for offline persistence, and real-time data synchronization."
     },
     "siafeson": {
       "title": "SIAFESON Mobile Suite",
-      "description": "Suite of 19 specialized mobile applications for phytosanitary monitoring of pests and diseases in crops (weevil, whitefly, grasshopper, Diaphorina, etc.). Each app enables field data capture, offline synchronization, and real-time reporting."
+      "description": "Suite of 18 specialized mobile applications for phytosanitary monitoring of pests and diseases in crops (weevil, whitefly, grasshopper, Diaphorina, etc.). Each app enables field data capture, offline synchronization, and real-time reporting.",
+      "viewApps": "View all applications",
+      "hideApps": "Hide applications",
+      "apps": [
+        "SISTGLOB - Global Trapping System",
+        "SIMCROS - Pink Mealybug Monitoring System",
+        "SIMPICUDO - Pepper Weevil Monitoring System",
+        "SIMA - Avocado Regulated Pests Monitoring System",
+        "SIMMOKO - Banana Moko Monitoring System",
+        "SIMLAN - Grasshopper Monitoring System",
+        "SIMCHA - Cricket Monitoring System",
+        "SIMARP - Pepper Spider Mite Monitoring System",
+        "SIMPIOJO - Grape Mealybug Monitoring System",
+        "SIMDIACQ - Diaphorina Chemical Control System",
+        "SIMDIACQT - Diaphorina Chemical Control Backyards System",
+        "SIMPAR - Paratrioza Monitoring System",
+        "SIMMBLA - Whitefly Monitoring System",
+        "SIPVID - Spider and Leafhopper Trapping System",
+        "SIPVIDCQ - Spider and Leafhopper Chemical Control System",
+        "SIMPRA - Prays Monitoring System",
+        "ENCUESTAS - Surveys System",
+        "INVENTARIOS - Inventory System"
+      ]
+    },
+    "csremas": {
+      "title": "CSREMAS - Weather Network",
+      "description": "Native iOS application built with SwiftUI for Sonora's Automated Weather Stations Network (REMAS). Provides real-time weather data, forecasts, reference evapotranspiration, and data visualization for agricultural zones."
+    },
+    "sutues": {
+      "title": "SUTUES - Union Portal",
+      "description": "Web platform for the State University of Sonora Workers Union. Built with Laravel, Vue.js, Bootstrap, and Inertia.js for publishing news, announcements, reports, and communication with union members."
     }
   },
   "experience": {

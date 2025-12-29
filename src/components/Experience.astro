@@ -1,32 +1,63 @@
 ---
-import { t } from "i18next";
+import i18next from "i18next";
+import SectionContainer from "./SectionContainer.astro";
 import ExperienceItem from "./ExperienceItem.astro";
-const EXPERIENCIE = [
+import BriefCase from "../icons/BriefCase.astro";
+
+const t = i18next.t.bind(i18next);
+
+const EXPERIENCE = [
   {
     date: t("cesave.period"),
     title: t("cesave.title"),
+    company: "CESAVE Sonora",
     description: t("cesave.description"),
     link: "",
   },
   {
     date: t("fidelity.period"),
     title: t("fidelity.title"),
+    company: "Smarketing Hmo / FidelityApps",
     description: t("fidelity.description"),
   },
   {
     date: t("teknol.period"),
     title: t("teknol.title"),
+    company: "Teknol",
     description: t("teknol.description"),
   },
 ];
 ---
 
-<ol class="relative border-s border-gray-200 ml-3">
-  {
-    EXPERIENCIE.map((experiencie) => (
-      <li class="mb-10 ms-4">
-        <ExperienceItem {...experiencie} />
-      </li>
-    ))
-  }
-</ol>
+<SectionContainer id="experience" class="py-20">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-12">
+      <div class="flex items-center justify-center gap-3 mb-4">
+        <BriefCase class="size-10 text-blue-600 dark:text-blue-400" />
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+          {t("experience.title")}
+        </h2>
+      </div>
+    </div>
+
+    <div class="relative">
+      <!-- Timeline line -->
+      <div
+        class="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-transparent"
+      >
+      </div>
+
+      <div class="space-y-12">
+        {
+          EXPERIENCE.map((exp, index) => (
+            <div
+              class={`relative ${index % 2 === 0 ? "md:ml-auto md:pl-12" : "md:mr-auto md:pr-12"} md:w-1/2`}
+            >
+              <ExperienceItem {...exp} />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</SectionContainer>

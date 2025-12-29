@@ -51,12 +51,42 @@
       "description": "Sistema de gestión de permisos de siembra nacionales y estatales con seguimiento en tiempo real y flujos de aprobación."
     },
     "mobile": {
-      "title": "App de Recolección de Datos de Campo",
-      "description": "Aplicación móvil para técnicos de campo para recolectar y sincronizar datos agrícolas en tiempo real."
+      "title": "Suite Nativa Android - SIAFESON",
+      "description": "Suite de aplicaciones Android nativas desarrolladas con Kotlin para monitoreo fitosanitario en campo. Incluye 3+ aplicaciones optimizadas con arquitectura MVVM, Room Database para persistencia offline y sincronización de datos en tiempo real."
     },
     "siafeson": {
       "title": "Suite Móvil SIAFESON",
-      "description": "Conjunto de 19 aplicaciones móviles especializadas para monitoreo fitosanitario de plagas y enfermedades en cultivos (picudo, mosca blanca, langosta, Diaphorina, etc.). Cada app permite captura de datos en campo, sincronización offline y reportes en tiempo real."
+      "description": "Conjunto de 18 aplicaciones móviles especializadas para monitoreo fitosanitario de plagas y enfermedades en cultivos (cruciféras, picudo, mosca blanca, langosta, Diaphorina, etc.). Cada app permite captura de datos en campo, sincronización offline y reportes en tiempo real.",
+      "viewApps": "Ver todas las aplicaciones",
+      "hideApps": "Ocultar aplicaciones",
+      "apps": [
+        "SISTGLOB - Sistema de Trampeo Global",
+        "SIMCROS - Sistema de Monitoreo de Cochinilla Rosada",
+        "SIMPICUDO - Sistema de Monitoreo de Picudo del Chile",
+        "SIMA - Sistema de Monitoreo de Plagas Reglamentadas del Aguacate",
+        "SIMMOKO - Sistema de Monitoreo Monitoreo de Moko del Plátano",
+        "SIMLAN - Sistema de Monitoreo Monitoreo de Langosta",
+        "SIMCHA - Sistema de Monitoreo Monitoreo de Chapulín",
+        "SIMARP - Sistema de Monitoreo Monitoreo de Arañuela del Pimiento",
+        "SIMPIOJO - Sistema de Monitoreo Monitoreo de Piojo Harinoso de la Vid",
+        "SIMDIACQ - Sistema de Monitoreo de Diaphorina Control Quimico",
+        "SIMDIACQT - Sistema de Monitoreo de Diaphorina Control Quimico Traspatios",
+        "SIMPAR - Sistema de Monitoreo de Paratrioza",
+        "SIMMBLA - Sistema de Monitoreo Monitoreo de Mosquita Blanca",
+        "SIPVID - Sistema de Trampeo arañas y chicharras",
+        "SIPVIDCQ - Sistema deTrampeo arañas y chicharras Control Quimico",
+        "SIMPRA - Sistema de Monitoreo Monitoreo de Prays",
+        "ENCUESTAS - Sistema de Encuestas",
+        "INVENTARIOS - Sistema de Inventarios"
+      ]
+    },
+    "csremas": {
+      "title": "CSREMAS - Red Meteorológica",
+      "description": "Aplicación iOS nativa desarrollada con SwiftUI para la Red de Estaciones Meteorológicas Automatizadas de Sonora (REMAS). Proporciona datos meteorológicos en tiempo real, pronósticos del clima, evapotranspiración de referencia y visualización de datos para zonas agrícolas."
+    },
+    "sutues": {
+      "title": "SUTUES - Portal Sindical",
+      "description": "Plataforma web para el Sindicato Único de Trabajadores de la Universidad Estatal de Sonora. Desarrollada con Laravel, Vue.js, Bootstrap e Inertia.js para la publicación de noticias, convocatorias, informes y comunicación con los agremiados."
     }
   },
   "experience": {

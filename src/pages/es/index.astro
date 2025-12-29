@@ -1,75 +1,18 @@
 ---
-import { changeLanguage, t } from "i18next";
 import Layout from "../../layouts/Layout.astro";
-import SectionContainer from "../../components/SectionContainer.astro";
-import LinkedIn from "../../icons/LinkedIn.astro";
-import GitHub from "../../icons/GitHub.astro";
-import Mail from "../../icons/Mail.astro";
-import Code from "../../icons/Code.astro";
-import SocialList from "../../components/SocialList.astro";
-import Experience from "../../components/Experience.astro";
-import BriefCase from "../../icons/BriefCase.astro";
+import Hero from "../../components/Hero.astro";
+import About from "../../components/About.astro";
+import Education from "../../components/Education.astro";
 import Projects from "../../components/Projects.astro";
-
-changeLanguage("es");
+import Experience from "../../components/Experience.astro";
+import Contact from "../../components/Contact.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-  <main class="px-4">
-    <SectionContainer id="about" class="py-44 pb-24">
-      <img
-        class="rounded-full size-12 mb-4"
-        src="https://cdn-photos.occ.com.mx/images/photos/300x300/384/3848fe3d0787446f9cf6357414777796.jpg"
-        alt="photo"
-      />
-      <h1
-        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
-      >
-        {t("about.me")}
-        <div class="flex justify-center items-center">
-          <a
-            href="https://www.linkedin.com/in/franciscoestebanflores"
-            target="_blank"
-            rel="noopener"
-            class="flex justify-center items-center"
-          >
-            <!--<Badge>Disponible para trabajar</Badge>-->
-          </a>
-        </div>
-      </h1>
-      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
-        <span class="text-green-200/90">{t("about.grade")}</span>
-        <span> {t("about.content")}</span>
-        <span class="text-red-200/90"> {t("about.location")}</span>
-      </h2>
-      <nav class="flex gap-4 mt-8 flex-wrap">
-        <SocialList href="https://www.linkedin.com/in/franciscoestebanflores">
-          <LinkedIn class="size-4 md:size-6" />
-          LinkedIn
-        </SocialList>
-        <SocialList href="https://github.com/pyrofefa">
-          <GitHub class="size-4 md:size-6" />
-          GitHub
-        </SocialList>
-        <SocialList href="mailto:fcoestebanflores@gmail.com">
-          <Mail class="size-4 md:size-6" />
-          fcoestebanflores@gmail.com
-        </SocialList>
-      </nav>
-    </SectionContainer>
-    <SectionContainer id="experience">
-      <h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
-        <BriefCase class="size-8" />
-        {t("experience.tittle")}
-      </h2>
-      <Experience />
-    </SectionContainer>
-    <!--<SectionContainer id="proyectos">
-      <h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
-        <Code class="size-8" />
-        Proyectos
-      </h2>
-      <Projects />
-    </SectionContainer>-->
-  </main>
+<Layout title="Esteban Flores - Desarrollador Full-Stack & Móvil" lang="es">
+  <Hero />
+  <About />
+  <Education />
+  <Projects />
+  <Experience />
+  <Contact />
 </Layout>
