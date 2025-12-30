@@ -47,15 +47,23 @@ const t = i18next.t.bind(i18next);
 
     <!-- Theme initialization script (runs before page render to prevent flash) -->
     <script is:inline>
-      // Initialize theme before page render
-      const savedTheme = localStorage.getItem('color-theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      (function() {
+        // Initialize theme before page render to prevent flash
+        const savedTheme = localStorage.getItem('color-theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = savedTheme || (prefersDark ? 'dark' : 'light');
 
-      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+
+        // Save initial theme if not set
+        if (!savedTheme) {
+          localStorage.setItem('color-theme', theme);
+        }
+      })();
     </script>
   </head>
   <body class="relative text-black dark:text-white">
